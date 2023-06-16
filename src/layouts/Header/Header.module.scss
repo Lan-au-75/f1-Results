@@ -1,0 +1,127 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1320px;
+    width: 100%;
+    margin: auto;
+    height: 49px;
+}
+
+.item-action-link,
+.item-link-f {
+    line-height: 2.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+// left
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.fia_logo {
+    width: 37px;
+    height: 25px;
+    opacity: 0.5;
+    margin-left: 10px;
+}
+
+.list-f {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -18px;
+        height: calc(var(--header-height) - 25px);
+        border-left: 1px solid #d0d0d2;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.item-link-f {
+    min-width: 47px;
+    max-height: 49px;
+    padding: 13px 10px 13px 11px;
+
+    a {
+        transition: linear 0.4s;
+        color: var(--text100);
+        font-size: 1.2rem;
+
+        &:hover {
+            color: var(--text200);
+        }
+    }
+}
+
+// right
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.global-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    padding: 0 13px;
+}
+
+.item-action-link {
+    a {
+        color: var(--text200);
+        font-size: 1.2rem;
+
+        &:hover {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+        }
+    }
+}
+
+.f1_tv_link {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: calc(var(--header-height) - 25px);
+        border-left: 1px solid #d0d0d2;
+        transform: translate(-50%, -50%);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        height: calc(var(--header-height) - 25px);
+        border-left: 1px solid #d0d0d2;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.f1_tv_logo {
+    width: 106px;
+    height: 35px;
+    padding: 0 18px;
+}
+
+.btn-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
