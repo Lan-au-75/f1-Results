@@ -12,6 +12,7 @@
     --text-table-td: #4a4a4a;
     --bk-table: #f4f4f4;
     --header-height: 49px;
+    --result-title: #171717;
 }
 
 * {
@@ -43,6 +44,14 @@ body {
     line-height: 1.6rem;
 }
 
+.dark {
+    color: #4a4a4a;
+}
+
+.bold {
+    font-weight: 700;
+}
+
 // DefaultLayout
 
 .container {
@@ -54,7 +63,7 @@ body {
 }
 
 .main {
-    max-width: 1200px;
+    max-width: 1440px;
     width: 100%;
     height: auto;
     background-color: var(--white-color);

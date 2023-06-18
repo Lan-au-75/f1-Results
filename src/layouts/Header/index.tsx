@@ -2,8 +2,33 @@ import classNames from 'classnames/bind'
 import { BiUser } from 'react-icons/bi'
 import styles from './Header.module.scss'
 import images from '../../assets/images'
+import { Link } from 'react-router-dom'
+import { v4 as uuidv4 } from 'uuid'
 
 const cx = classNames.bind(styles)
+
+const headerRight = [
+    {
+        title: 'Authentics',
+        link: '#',
+    },
+    {
+        title: 'Store',
+        link: '#',
+    },
+    {
+        title: 'Tickets',
+        link: '#',
+    },
+    {
+        title: 'Hospitality',
+        link: '#',
+    },
+    {
+        title: 'Experiences',
+        link: '#',
+    },
+]
 
 function Header() {
     return (
@@ -15,33 +40,33 @@ function Header() {
 
                 <ul className={cx('list-f')}>
                     <li className={cx('item-link-f')}>
-                        <a href='#'>
+                        <Link to='#'>
                             <span>
                                 F1 <sup>®</sup>
                             </span>
-                        </a>
+                        </Link>
                     </li>
                     <li className={cx('item-link-f')}>
-                        <a href='#'>
+                        <Link to='#'>
                             <span>
                                 F2 <sup>™</sup>
                             </span>
-                        </a>
+                        </Link>
                     </li>
                     <li className={cx('item-link-f')}>
-                        <a href='#'>
+                        <Link to='#'>
                             <span>
                                 F3 <sup>™</sup>
                             </span>
-                        </a>
+                        </Link>
                     </li>
                     <li className={cx('item-link-f')}>
-                        <a href='#'>
+                        <Link to='#'>
                             <span>
                                 F1 <sup>®</sup>
                                 ACADEMY
                             </span>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -49,21 +74,11 @@ function Header() {
             {/* right */}
             <div className={cx('header-right')}>
                 <ul className={cx('global-link')}>
-                    <li className={cx('item-action-link')}>
-                        <a href='#'>Authentics</a>
-                    </li>
-                    <li className={cx('item-action-link')}>
-                        <a href='#'>Store</a>
-                    </li>
-                    <li className={cx('item-action-link')}>
-                        <a href='#'>Tickets</a>
-                    </li>
-                    <li className={cx('item-action-link')}>
-                        <a href='#'>Hospitality</a>
-                    </li>
-                    <li className={cx('item-action-link')}>
-                        <a href='#'>Experiences</a>
-                    </li>
+                    {headerRight.map((item) => (
+                        <li key={uuidv4()} className={cx('item-action-link')}>
+                            <Link to={item.link}>{item.title}</Link>
+                        </li>
+                    ))}
                 </ul>
                 <a className={cx('f1_tv_link')} href='#'>
                     <img className={cx('f1_tv_logo')} src={images.f1_tv_logo} alt='f1_tv_logo' />

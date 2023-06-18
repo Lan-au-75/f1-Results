@@ -3,6 +3,7 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { v4 as uuidv4 } from 'uuid'
 import styles from './SubHeader.module.scss'
 import images from '../../assets/images'
+import { Link } from 'react-router-dom'
 
 const cx = classNames.bind(styles)
 
@@ -55,10 +56,10 @@ function SubHeader() {
                     <ul className={cx('list-nav')}>
                         {navBar.map((nav) => (
                             <li key={uuidv4()} className={cx('nav-link')}>
-                                <a href=''>
+                                <Link to='#'>
                                     <span style={{ paddingRight: '4px' }}>{nav?.title}</span>{' '}
                                     {nav?.icon && <IoIosArrowDown size={10} />}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>

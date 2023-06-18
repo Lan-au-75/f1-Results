@@ -13,4 +13,10 @@ npm i
 
 npm start
 
+npm run json (lấy api)
+
 ```
+
+# Demo
+
+-   Result
